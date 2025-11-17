@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Termini di Servizio | LavoroRemoto</title>
+  <meta name="description" content="Leggi i termini e condizioni che regolano l'utilizzo dei servizi di LavoroRemoto. Informazioni complete su diritti e responsabilità." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root{
+      --bg: #f8f5f0;
+      --card: #ffffff;
+      --muted: #6c757d;
+      --text: #333333;
+      --white: #ffffff;
+      --primary: #008C45; /* Italian green */
+      --primary-600: #007238;
+      --primary-300: #4CAF50;
+      --secondary: #CD212A; /* Italian red */
+      --accent: #F4F4E9;
+      --blue: #3b82f6;
+      --ring: 0 0 0 3px rgba(0, 140, 69, 0.25);
+      --radius:12px;
+      --transition: all 0.3s ease;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;line-height:1.6; font-size: 16px;}
+    img{max-width:100%;display:block}
+    a{color:var(--primary);text-decoration:none}
+    a:hover{text-decoration:underline; color: var(--primary-600);}
+    .container{width:min(1120px,92%);margin-inline:auto}
+
+    .nav{position:sticky;top:0;z-index:50;background:rgba(248, 245, 240, 0.95);backdrop-filter:blur(8px);border-bottom:1px solid rgba(0, 0, 0, 0.08); box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+    .brand{font-weight:800;letter-spacing:.3px;font-size:1.2rem; color: var(--primary);}
+    .nav-links{display:flex;gap:16px;align-items:center}
+    .nav-link{opacity:.85; transition: var(--transition); font-size: 0.95rem;}
+    .nav-link:hover{opacity:1; color: var(--primary);}
+
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 20px;border-radius:10px;border:0;font-weight:600;cursor:pointer;transition:var(--transition); font-size: 0.95rem;}
+    .btn-primary{background:var(--primary);color:var(--white); box-shadow: var(--shadow);}
+    .btn-primary:hover{background:var(--primary-600); transform: translateY(-2px); box-shadow: var(--shadow-hover);}
+    
+    .section{padding:60px 0}
+    .section.alt{background:var(--accent)}
+    h1{margin:0 0 20px;font-size:36px; font-weight: 800; color: #222;}
+    h2{margin:30px 0 15px;font-size:28px; font-weight: 700; color: #222;}
+    h3{margin:25px 0 10px;font-size:22px; font-weight: 600; color: #222;}
+    h4{margin:20px 0 8px;font-size:18px; font-weight: 600; color: #222;}
+    .muted{color:var(--muted); line-height: 1.5;}
+    .small{font-size:0.88rem}
+    
+    .content-card{background:var(--card);border:1px solid rgba(0, 0, 0, 0.08);border-radius:var(--radius);padding:40px; box-shadow: var(--shadow);}
+    
+    .footer{border-top:1px solid rgba(0, 0, 0, 0.08);padding:32px 0 20px;background:#f0ede6}
+    .footer-grid{display:flex;justify-content:space-between;gap:18px;align-items:flex-start; margin-bottom: 20px;}
+    .footer-links{display:flex;gap:16px;flex-wrap:wrap}
+    
+    .last-updated {background: rgba(0, 140, 69, 0.1); padding: 12px 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid var(--primary);}
+    
+    .toc {background: var(--accent); padding: 20px; border-radius: var(--radius); margin: 30px 0;}
+    .toc h3 {margin-top: 0;}
+    .toc ul {padding-left: 20px;}
+    .toc li {margin-bottom: 8px;}
+    
+    .highlight-box {background: rgba(0, 140, 69, 0.05); border: 1px solid rgba(0, 140, 69, 0.2); border-radius: var(--radius); padding: 20px; margin: 20px 0;}
+    
+    .warning-box {background: rgba(205, 33, 42, 0.05); border: 1px solid rgba(205, 33, 42, 0.2); border-radius: var(--radius); padding: 20px; margin: 20px 0;}
+    
+    .clause {margin-bottom: 25px;}
+    .clause-number {display: inline-block; background: var(--primary); color: white; width: 30px; height: 30px; border-radius: 50%; text-align: center; line-height: 30px; margin-right: 10px; font-weight: bold;}
+    
+    /* Animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .fade-in {
+      animation: fadeIn 0.5s ease forwards;
+    }
+    
+    /* Mobile responsiveness */
+    @media (max-width: 980px){
+      h1 {font-size: 32px;}
+      h2 {font-size: 26px;}
+      .section {padding: 50px 0;}
+      .content-card {padding: 30px;}
+    }
+    
+    @media (max-width: 640px) {
+      .nav-links {gap: 10px;}
+      .btn {padding: 9px 16px; font-size: 0.92rem;}
+      .footer-grid {flex-direction: column; gap: 20px;}
+      .footer-links {flex-direction: column; gap: 10px;}
+      .section {padding: 40px 0;}
+      .content-card {padding: 24px;}
+      h1 {font-size: 28px;}
+      h2 {font-size: 24px;}
+    }
+    
+    @media (max-width: 480px) {
+      h1 {font-size: 26px;}
+      h2 {font-size: 22px;}
+      .brand {font-size: 1.1rem;}
+      .nav-link {font-size: 0.9rem;}
+      .btn {font-size: 0.9rem;}
+    }
+  </style>
+</head>
+<body>
+  <!-- Top Nav -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html" aria-label="Home">LavoroRemoto</a>
+      <nav class="nav-links">
+        <a href="index.html#roles" class="nav-link">Ruoli</a>
+        <a href="index.html#benefits" class="nav-link">Vantaggi</a>
+        <a href="index.html#faq" class="nav-link">FAQ</a>
+        <a href="index.html#apply" class="btn btn-primary">Candidati ora</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Terms of Service Content -->
+  <section class="section">
+    <div class="container">
+      <div class="content-card fade-in">
+        <h1>Termini di Servizio</h1>
+        
+        <div class="last-updated">
+          <p><strong>Ultimo aggiornamento:</strong> 15 Ottobre 2024</p>
+        </div>
+        
+        <div class="toc">
+          <h3>Indice dei contenuti</h3>
+          <ul>
+            <li><a href="#acceptance">1. Accettazione dei Termini</a></li>
+            <li><a href="#services">2. Descrizione dei Servizi</a></li>
+            <li><a href="#eligibility">3. Requisiti di Idoneità</a></li>
+            <li><a href="#registration">4. Registrazione e Account</a></li>
+            <li><a href="#payments">5. Pagamenti e Commissioni</a></li>
+            <li><a href="#user-responsibilities">6. Responsabilità dell'Utente</a></li>
+            <li><a href="#content">7. Contenuti e Proprietà Intellettuale</a></li>
+            <li><a href="#privacy">8. Privacy e Dati Personali</a></li>
+            <li><a href="#termination">9. Sospensione e Risoluzione</a></li>
+            <li><a href="#limitations">10. Limitazioni di Responsabilità</a></li>
+            <li><a href="#changes">11. Modifiche ai Termini</a></li>
+            <li><a href="#governing-law">12. Legge Applicabile e Foro Competente</a></li>
+            <li><a href="#contact">13. Contatti</a></li>
+          </ul>
+        </div>
+        
+        <div class="highlight-box">
+          <p><strong>In breve:</strong> Utilizzando i nostri servizi, accetti questi termini. Ti preghiamo di leggerli attentamente. I nostri servizi collegano lavoratori remoti con opportunità di lavoro flessibile. Non garantiamo redditi specifici e non addebitiamo tariffe di candidatura.</p>
+        </div>
+        
+        <div class="warning-box">
+          <p><strong>Importante:</strong> Questi termini costituiscono un accordo legalmente vincolante tra te e LavoroRemoto. Se non accetti questi termini, ti preghiamo di non utilizzare i nostri servizi.</p>
+        </div>
+        
+        <h2 id="acceptance">1. Accettazione dei Termini</h2>
+        <div class="clause">
+          <span class="clause-number">1.1</span>
+          <strong>Accettazione</strong>
+          <p>Accedendo o utilizzando i servizi di LavoroRemoto ("Servizi"), tu accetti di essere legalmente vincolato da questi Termini di Servizio ("Termini"). Se non accetti questi Termini, ti preghiamo di non utilizzare i nostri Servizi.</p>
+        </div>
+        
+        <div class="clause">
+          <span class="clause-number">1.2</span>
+          <strong>Modifiche ai Termini</strong>
+          <p>Ci riserviamo il diritto di modificare questi Termini in qualsiasi momento. Le modifiche entreranno in vigore al momento della pubblicazione sul nostro sito web. Il tuo uso continuato dei Servizi dopo tali modifiche costituisce la tua accettazione dei Termini modificati.</p>
+        </div>
+        
+        <div class="clause">
+          <span class="clause-number">1.3</span>
+          <strong>Termini Supplementari</strong>
+          <p>Alcuni servizi potrebbero essere soggetti a termini supplementari che verranno presentati al momento dell'utilizzo di tali servizi. I termini supplementari sono incorporati in questi Termini per riferimento.</p>
+        </div>
+        
+        <h2 id="services">2. Descrizione dei Servizi</h2>
+        <div class="clause">
+          <span class="clause-number">2.1</span>
+          <strong>Natura dei Servizi</strong>
+          <p>LavoroRemoto fornisce una piattaforma che collega lavoratori remoti ("Lavoratori") con opportunità di lavoro flessibile ("Opportunità") offerte da vari partner commerciali ("Partner"). Agiamo come intermediario e non siamo il datore di lavoro diretto dei Lavoratori.</p>
+        </div>
+        
+        <div class="clause">
+          <span class="clause-number">2.2</span>
+          <strong>Nessuna Garanzia di Lavoro</strong>
+          <p>Non garantiamo la disponibilità continua di Opportunità di lavoro né garantiamo che ogni Lavoratore riceverà assegnazioni di lavoro. La disponibilità delle Opportunità dipende dalla domanda dei Partner e da altri fattori di mercato.</p>
+        </div>
+        
+        <div class="clause">
+          <span class="clause-number">2.3</span>
+          <strong>Modifiche ai Servizi</strong>
+          <p>Ci riserviamo il diritto di modificare, sospendere o interrompere i Servizi, in tutto o in parte, in qualsiasi momento, con o senza preavviso.</p>
+        </div>
+        
+        <h2 id="eligibility">3. Requisiti di Idoneità</h2>
+        <div class="clause">
+          <span class="clause-number">3.1</span>
+          <strong>Età Minima</strong>
+          <p>Per utilizzare i nostri Servizi, devi avere almeno 18 anni di età. Utilizzando i Servizi, dichiari e garantisci di avere almeno 18 anni.</p>
+        </div>
+        
+        <div class="clause">
+          <span class="clause-number">3.2</span>
+          <strong>Capacità Legale</strong>
+          <p>Dichiari di avere la capacità legale di stipulare contratti vincolanti ai sensi della legge applicabile.</p>
+        </div>
+        
+        <div class="clause">
+          <span class="clause-number">3.3</span>
+          <strong>Restrizioni Geografiche</strong>
+          <p>I nostri Servizi sono attualmente disponibili solo per residenti in Italia. Ci riserviamo il diritto di limitare l'accesso ai nostri Servizi in qualsiasi paese o giurisdizione a nostra discrezione.</p>
+        </div>
+        
+        <h2 id="registration">4. Registrazione e Account</h2>
+        <div class="clause">
+          <span class="clause-number">4.1</span>
+          <strong>Creazione dell'Account</strong>
+          <p>Per accedere a determinate funzionalità dei Servizi, potrebbe essere necessario registrarsi e creare un account. Ti impegni a fornire informazioni accurate, complete e aggiornate durante il processo di registrazione.</p>
+        </div>
+        
+        <div class="clause">
+          <span class="clause-number">4.2</span>
+          <strong>Sicurezza dell'Account</strong>
+          <p>Sei responsabile di mantenere la riservatezza delle tue credenziali di accesso e di tutte le attività che si verificano sotto il tuo account. Accetti di notificarci immediatamente qualsiasi uso non autorizzato del tuo account.</p>
+        </div>
+        
+        <div class="clause">
+          <span class="clause-number">4.3</span>
+          <strong>Account Veritieri</strong>
+          <p>Non è consentito creare un account utilizzando informazioni false o fuorvianti, o creare più account per la stessa persona.</p>
+        </div>
+        
+        <h2 id="payments">5. Pagamenti e Commissioni</h2>
+        <div class="clause">
+          <span class="clause-number">5.1</span>
+          <strong>Nessuna Tariffa di Candidatura</strong>
+          <p>Non addebitiamo tariffe per la candidatura alle Opportunità di lavoro attraverso la nostra piattaforma. L'accesso ai Servizi di base è gratuito.</p>
+        </div>
+        
+        <div class="clause">
+          <span class="clause-number">5.2</span>
+          <strong>Pagamenti per il Lavoro</strong>
+          <p>I pagamenti per il lavoro completato vengono elaborati secondo i termini specificati per ciascuna Opportunità. I tempi di pagamento possono variare a seconda del Partner e del metodo di pagamento.</p>
+        </div>
+        
+        <div class="clause">
+          <span class="clause-number">5.3</span>
+          <strong>Tasse e Responsabilità Fiscali</strong>
+          <p>Sei responsabile del pagamento di tutte le tasse, imposte e contributi obbligatori relativi al reddito guadagnato attraverso i nostri Servizi. Consigliamo di consultare un professionista fiscale per comprendere i tuoi obblighi.</p>
+        </div>
+        
+        <div class="clause">
+          <span class="clause-number">5.4</span>
+          <strong>Dispute sui Pagamenti</strong>
+          <p>Eventuali dispute relative ai pagamenti devono essere segnalate entro 7 giorni dalla data di pagamento prevista. Non possiamo risolvere dispute segnalate dopo questo periodo.</p>
+        </div>
+        
+        <h2 id="user-responsibilities">6. Responsabilità dell'Utente</h2>
+        <div class="clause">
+          <span class="clause-number">6.1</span>
+          <strong>Condotta Appropriata</strong>
+          <p>Ti impegni a utilizzare i Servizi in modo legale, etico e in conformità con questi Termini. Non è consentito:</p>
+          <ul>
+            <li>Utilizzare i Servizi per scopi illegali o non autorizzati</li>
+            <li>Violare diritti di proprietà intellettuale</li>
+            <li>Trasmettere malware o codice dannoso</li>
+            <li>Interferire con il corretto funzionamento dei Servizi</li>
+            <li>Tentare di accedere non autorizzato ad account o sistemi</li>
+          </ul>
+        </div>
+        
+        <div class="clause">
+          <span class="clause-number">6.2</span>
+          <strong>Qualità del Lavoro</strong>
+          <p>Ti impegni a svolgere il lavoro assegnato con professionalità e secondo gli standard di qualità richiesti. Il mancato rispetto degli standard di qualità può comportare la sospensione dell'account.</p>
+        </div>
+        
+        <div class="clause">
+          <span class="clause-number">6.3</span>
+          <strong>Comunicazioni Professionali</strong>
+          <p>Ti impegni a mantenere comunicazioni professionali con il nostro staff e con i Partner. Comportamenti inappropriati, minacce o linguaggio offensivo non saranno tollerati.</p>
+        </div>
+        
+        <h2 id="content">7. Contenuti e Proprietà Intellettuale</h2>
+        <div class="clause">
+          <span class="clause-number">7.1</span>
+          <strong>Licenza Limitata</strong>
+          <p>Ti concediamo una licenza limitata, non esclusiva, non trasferibile e revocabile per utilizzare i nostri Servizi per scopi personali e non commerciali, in conformità con questi Termini.</p>
+        </div>
+        
+        <div class="clause">
+          <span class="clause-number">7.2</span>
+          <strong>Proprietà Intellettuale</strong>
+          <p>Riconosci che tutti i diritti di proprietà intellettuale relativi ai Servizi, inclusi marchi, loghi, contenuti e tecnologia, sono di nostra proprietà o concessi in licenza a noi.</p>
+        </div>
+        
+        <div class="clause">
+          <span class="clause-number">7.3</span>
+          <strong>Contenuti dell'Utente</strong>
+          <p>Consentendoci di utilizzare, ospitare, memorizzare, riprodurre e modificare i contenuti che pubblichi sui Servizi, ci concedi una licenza mondiale, royalty-free e non esclusiva per tali fini.</p>
+        </div>
+        
+        <h2 id="privacy">8. Privacy e Dati Personali</h2>
+        <div class="clause">
+          <span class="clause-number">8.1</span>
+          <strong>Informativa sulla Privacy</strong>
+          <p>La raccolta e l'utilizzo dei tuoi dati personali sono regolati dalla nostra <a href="privacy.html">Informativa sulla Privacy</a>, che è incorporata in questi Termini per riferimento.</p>
+        </div>
+        
+        <div class="clause">
+          <span class="clause-number">8.2</span>
+          <strong>Consenso al Trattamento</strong>
+          <p>Utilizzando i Servizi, acconsenti al trattamento dei tuoi dati personali come descritto nella nostra Informativa sulla Privacy.</p>
+        </div>
+        
+        <h2 id="termination">9. Sospensione e Risoluzione</h2>
+        <div class="clause">
+          <span class="clause-number">9.1</span>
+          <strong>Terminazione da Parte dell'Utente</strong>
+          <p>Puoi terminare il tuo account in qualsiasi momento disattivando il tuo account attraverso le impostazioni o contattandoci direttamente.</p>
+        </div>
+        
+        <div class="clause">
+          <span class="clause-number">9.2</span>
+          <strong>Terminazione da Parte Nostra</strong>
+          <p>Ci riserviamo il diritto di sospendere o terminare il tuo accesso ai Servizi, con o senza preavviso, per qualsiasi motivo, incluso ma non limitato alla violazione di questi Termini.</p>
+        </div>
+        
+        <div class="clause">
+          <span class="clause-number">9.3</span>
+          <strong>Conseguenze della Terminazione</strong>
+          <p>Alla terminazione, il tuo diritto di utilizzare i Servizi cesserà immediatamente. Le disposizioni di questi Termini che per loro natura dovrebbero sopravvivere alla terminazione sopravviveranno.</p>
+        </div>
+        
+        <h2 id="limitations">10. Limitazioni di Responsabilità</h2>
+        <div class="clause">
+          <span class="clause-number">10.1</span>
+          <strong>Nessuna Garanzia</strong>
+          <p>I Servizi sono forniti "così come sono" e "come disponibili", senza garanzie di alcun tipo, esplicite o implicite. Non garantiamo che i Servizi saranno ininterrotti, tempestivi, sicuri o privi di errori.</p>
+        </div>
+        
+        <div class="clause">
+          <span class="clause-number">10.2</span>
+          <strong>Limitazione di Responsabilità</strong>
+          <p>In nessun caso saremo responsabili per danni indiretti, incidentali, speciali, consequenziali o punitivi, derivanti dall'uso o dall'impossibilità di utilizzare i Servizi.</p>
+        </div>
+        
+        <div class="clause">
+          <span class="clause-number">10.3</span>
+          <strong>Responsabilità Massima</strong>
+          <p>La nostra responsabilità totale verso di te per qualsiasi reclamo relativo a questi Termini o ai Servizi non supererà l'importo che hai pagato a noi nei sei mesi precedenti alla presentazione del reclamo.</p>
+        </div>
+        
+        <h2 id="changes">11. Modifiche ai Termini</h2>
+        <div class="clause">
+          <span class="clause-number">11.1</span>
+          <strong>Diritto di Modifica</strong>
+          <p>Ci riserviamo il diritto, a nostra esclusiva discrezione, di modificare o sostituire questi Termini in qualsiasi momento.</p>
+        </div>
+        
+        <div class="clause">
+          <span class="clause-number">11.2</span>
+          <strong>Notifica delle Modifiche</strong>
+          <p>In caso di modifiche materiali, ti forniremo un preavviso di almeno 30 giorni attraverso i Servizi o via email. L'uso continuato dei Servizi dopo l'entrata in vigore delle modifiche costituisce l'accettazione dei nuovi Termini.</p>
+        </div>
+        
+        <h2 id="governing-law">12. Legge Applicabile e Foro Competente</h2>
+        <div class="clause">
+          <span class="clause-number">12.1</span>
+          <strong>Legge Applicabile</strong>
+          <p>Questi Termini saranno governati e interpretati in conformità con le leggi della Repubblica Italiana, senza riguardo ai suoi principi di conflitto di leggi.</p>
+        </div>
+        
+        <div class="clause">
+          <span class="clause-number">12.2</span>
+          <strong>Risoluzione delle Controversie</strong>
+          <p>Qualsiasi controversia derivante da o relativa a questi Termini sarà di competenza esclusiva dei tribunali di Milano, Italia.</p>
+        </div>
+        
+        <div class="clause">
+          <span class="clause-number">12.3</span>
+          <strong>Rinuncia al Ricorso Collettivo</strong>
+          <p>Accetti di risolvere eventuali dispute individualmente e rinunci a qualsiasi ricorso collettivo, tranne dove ciò sia vietato dalla legge.</p>
+        </div>
+        
+        <h2 id="contact">13. Contatti</h2>
+        <div class="clause">
+          <span class="clause-number">13.1</span>
+          <strong>Comunicazioni</strong>
+          <p>Per qualsiasi domanda riguardante questi Termini di Servizio, puoi contattarci:</p>
+          <div style="background: var(--accent); padding: 20px; border-radius: var(--radius); margin-top: 15px;">
+            <p><strong>LavoroRemoto S.r.l.</strong><br>
+            Email: <a href="mailto:termini@lavororemoto.it">termini@lavororemoto.it</a><br>
+            Telefono: +39 02 1234 5678<br>
+            Indirizzo: Via Roma 123, 20121 Milano, Italia</p>
+          </div>
+        </div>
+        
+        <div class="clause">
+          <span class="clause-number">13.2</span>
+          <strong>Notifiche</strong>
+          <p>Le notifiche a te relative a questi Termini possono essere effettuate via email o posta ordinaria. Le notifiche a noi devono essere effettuate per iscritto all'indirizzo sopra indicato.</p>
+        </div>
+        
+        <div class="last-updated" style="margin-top: 40px;">
+          <p><strong>Documento approvato il:</strong> 15 Ottobre 2024<br>
+          <strong>Prossima revisione prevista:</strong> Ottobre 2025</p>
+        </div>
+        
+        <div class="highlight-box" style="margin-top: 30px;">
+          <p><strong>Dichiarazione di Accettazione</strong><br>
+          Utilizzando i servizi di LavoroRemoto, dichiari di aver letto, compreso e accettato questi Termini di Servizio nella loro interezza.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="index.html">LavoroRemoto</a>
+        <p class="muted small">Opportunità trasparenti. Nessun reddito garantito. Nessuna tariffa di candidatura.</p>
+      </div>
+      <nav class="footer-links">
+        <a href="privacy.html" rel="nofollow">Informativa sulla Privacy</a>
+        <a href="userterms.html" rel="nofollow">Termini di Servizio</a>
+        <a href="index.html#contact" rel="nofollow">Contatti</a>
+      </nav>
+    </div>
+    <div class="container">
+      <p class="muted small">© 2024 LavoroRemoto. Tutti i diritti riservati. I guadagni mostrati sono solo esempi e non garanzie. I tuoi guadagni effettivi dipendono dalle tue competenze, tempo e disponibilità delle attività.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Aggiungi scroll fluido per i link interni
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+          
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            // Calcola l'offset per compensare l'header fisso
+            const offset = 80;
+            const elementPosition = targetElement.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - offset;
+            
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+            });
+            
+            // Aggiorna l'URL senza ricaricare la pagina
+            history.pushState(null, null, targetId);
+          }
+        });
+      });
+      
+      // Aggiungi animazioni fade-in
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      };
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+      
+      document.querySelectorAll('.fade-in').forEach(el => {
+        observer.observe(el);
+      });
+      
+      // Evidenzia la sezione attiva nel TOC durante lo scroll
+      const sections = document.querySelectorAll('h2');
+      const navLinks = document.querySelectorAll('.toc a');
+      
+      window.addEventListener('scroll', function() {
+        let current = '';
+        
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          if (pageYOffset >= (sectionTop - 100)) {
+            current = section.getAttribute('id');
+          }
+        });
+        
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + current) {
+            link.classList.add('active');
+            link.style.fontWeight = '600';
+            link.style.color = 'var(--primary)';
+          } else {
+            link.style.fontWeight = 'normal';
+            link.style.color = '';
+          }
+        });
+      });
+      
+      // Gestione del pulsante di accettazione (simulato)
+      const acceptanceBox = document.querySelector('.highlight-box:last-child');
+      if (acceptanceBox) {
+        const acceptButton = document.createElement('button');
+        acceptButton.textContent = 'Accetto i Termini di Servizio';
+        acceptButton.className = 'btn btn-primary';
+        acceptButton.style.marginTop = '15px';
+        acceptButton.addEventListener('click', function() {
+          alert('Grazie per aver accettato i nostri Termini di Servizio!');
+          // In un'implementazione reale, qui salveremmo l'accettazione nel database
+        });
+        acceptanceBox.appendChild(acceptButton);
+      }
+    });
+  </script>
+</body>
+</html>
